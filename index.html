@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | UPCycle · Campus Sostenible</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/jpg" href="iconos/favicon.jpg">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="index.html">
+      <img src="iconos/favicon.jpg" alt="Logo UPCycle" width="48" height="48">
+      UPCycle
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#mapa-pisos">Mapa por Pisos</a></li>
+        <li>
+          <details class="desplegable">
+            <summary>EcoPuntos y Canje</summary>
+            <ul class="submenu">
+              <li><a href="index.html#como-funciona">Cómo sumar puntos</a></li>
+              <li><a href="index.html#recompensas">Catálogo de premios</a></li>
+              <li><a href="index.html#registro-canje">Registrar / Canjear</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="recursos.html">Guía de Reciclaje</a></li>
+        <li><span class="badge-puntos" title="Saldo de demostración">🌱 360 EcoPts</span></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <!-- HERO -->
+  <section id="inicio" class="hero contenedor dos-columnas" aria-labelledby="titulo">
+    <div>
+      <p class="etiqueta">Red Universitaria de Reciclaje Inteligente</p>
+      <h1 id="titulo">Ubica tu punto verde.<br>Recicla y gana en el campus.</h1>
+      <p>Encuentra en segundos la estación de reciclaje más cercana en cualquier piso de la universidad, acumula <strong>EcoPuntos</strong> por cada botella, papel o residuo electrónico entregado y canjéalos por beneficios estudiantiles.</p>
+      <a class="boton" href="#mapa-pisos">Explorar mapa por pisos</a>
+      <a class="enlace" href="#recompensas">Ver recompensas disponibles</a>
+      <p class="nota">Plataforma académica vinculada al ODS 11 y ODS 12 · Simulación interactiva en HTML y CSS.</p>
+    </div>
+    <figure class="postal">
+      <img class="foto" src="imagenes/mapa1.png" alt="Estudiante llevando materiales reciclables en el campus" width="1000" height="667">
+      <figcaption>Cada piso del pabellón cuenta con islas ecológicas señalizadas.</figcaption>
+    </figure>
+  </section>
+
+  <!-- NOSOTROS / CONTEXTO -->
+  <section id="nosotros" class="seccion fondo">
+    <div class="contenedor dos-columnas">
+      <img class="foto" src="imagenes/feria.jpg" alt="Espacios comunitarios y puntos de acopio universitario" width="1000" height="667" loading="lazy">
+      <div>
+        <p class="etiqueta">Campus Cero Residuos</p>
+        <h2>¿Por qué mapear cada nivel del edificio?</h2>
+        <p>En edificios universitarios de múltiples pisos, los estudiantes suelen descartar residuos en tachos comunes por desconocer dónde se ubica la isla de segregación más próxima.</p>
+        <h3>Nuestra solución</h3>
+        <p><strong>UPCycle</strong> centraliza la ubicación exacta de los puntos ecológicos por nivel (desde el Sótano hasta el Piso 3) e incentiva el hábito mediante un sistema transparente de puntaje acumulativo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA EL PUNTAJE -->
+  <section id="como-funciona" class="seccion contenedor">
+    <p class="etiqueta">Sistema Acumulativo</p>
+    <h2>Tres pasos para transformar residuos en beneficios.</h2>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <div>
+          <span class="numero">01 / UBICA</span>
+          <h3>Consulta el mapa del piso</h3>
+          <p>Selecciona el nivel donde te encuentras para identificar los tachos de papel, plástico, vidrio o RAEE más cercanos.</p>
+        </div>
+        <a class="enlace" href="#mapa-pisos">Ir al mapa de pisos</a>
+      </article>
+      <article class="tarjeta">
+        <div>
+          <span class="numero">02 / DEPOSITA Y SUMA</span>
+          <h3>Registra tu entrega</h3>
+          <p>Escanea el código del punto ecológico e ingresa el código de estación en el formulario para sumar entre <strong>+15 y +50 EcoPuntos</strong>.</p>
+        </div>
+        <a class="enlace" href="#registro-canje">Registrar entrega</a>
+      </article>
+      <article class="tarjeta">
+        <div>
+          <span class="numero">03 / CANJEA</span>
+          <h3>Obtén recompensas</h3>
+          <p>Acumula puntaje durante el ciclo académico y cámbialo por cafés, impresiones, libretas recicladas o horas de sala de estudio.</p>
+        </div>
+        <a class="enlace" href="#recompensas">Ver catálogo</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- MAPEO INTERACTIVO POR PISOS -->
+  <section id="mapa-pisos" class="seccion fondo">
+    <div class="contenedor">
+      <p class="etiqueta">Mapeo Arquitectónico · Pabellón Central</p>
+      <h2>Puntos de reciclaje por piso</h2>
+      <p>Selecciona un nivel del edificio para visualizar la distribución de estaciones ecológicas y los tipos de residuos aceptados.</p>
+
+      <fieldset class="orientador">
+        <legend>Selecciona el piso de la universidad</legend>
+        <input type="radio" name="piso" id="piso1" checked><label for="piso1">Piso 1 · Hall y Cafetería</label>
+        <input type="radio" name="piso" id="piso2"><label for="piso2">Piso 2 · Aulas y Biblioteca</label>
+        <input type="radio" name="piso" id="piso3"><label for="piso3">Piso 3 · Laboratorios</label>
+        <input type="radio" name="piso" id="sotano"><label for="sotano">Sótano · Punto RAEE y Acopio</label>
+
+        <div class="resultados">
+          <!-- PISO 1 -->
+          <div class="respuesta piso1">
+            <p class="etiqueta">Nivel 01 · Alta afluencia</p>
+            <h3>Mapa del Piso 1 (3 Estaciones activas)</h3>
+            <div class="plano-piso">
+              <div class="punto-estacion azul">
+                <strong>Estación P1-A · Hall Principal</strong>
+                <p>Junto a los ascensores norte, frente a recepción.</p>
+                <span class="tag-tachos">📄 Papel (+15 pts) · 🧴 Plástico (+20 pts)</span>
+              </div>
+              <div class="punto-estacion">
+                <strong>Estación P1-B · Zona Cafetería</strong>
+                <p>Salida lateral hacia el patio central.</p>
+                <span class="tag-tachos">🥤 Envases PET (+20 pts) · 🌿 Orgánico (+10 pts)</span>
+              </div>
+              <div class="punto-estacion turquesa">
+                <strong>Estación P1-C · Pabellón A</strong>
+                <p>Pasillo hacia auditorio principal.</p>
+                <span class="tag-tachos">🥫 Latas/Aluminio (+25 pts) · 🍾 Vidrio (+25 pts)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PISO 2 -->
+          <div class="respuesta piso2">
+            <p class="etiqueta">Nivel 02 · Zona Académica</p>
+            <h3>Mapa del Piso 2 (2 Estaciones activas)</h3>
+            <div class="plano-piso">
+              <div class="punto-estacion azul">
+                <strong>Estación P2-A · Ingreso Biblioteca</strong>
+                <p>Al costado de los módulos de autopréstamo.</p>
+                <span class="tag-tachos">📚 Papel y Cartón limpio (+20 pts)</span>
+              </div>
+              <div class="punto-estacion">
+                <strong>Estación P2-B · Corredor Aulas 201–210</strong>
+                <p>Frente a las máquinas dispensadoras de agua.</p>
+                <span class="tag-tachos">🧴 Botellas PET (+20 pts) · 📄 Hojas (+15 pts)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PISO 3 -->
+          <div class="respuesta piso3">
+            <p class="etiqueta">Nivel 03 · Ciencia y Tecnología</p>
+            <h3>Mapa del Piso 3 (2 Estaciones activas)</h3>
+            <div class="plano-piso">
+              <div class="punto-estacion turquesa">
+                <strong>Estación P3-A · Pasillo de Cómputo</strong>
+                <p>Junto a la sala de impresión estudiantil.</p>
+                <span class="tag-tachos">📄 Papel Bond (+15 pts) · 🖨️ Tóner vacío (+40 pts)</span>
+              </div>
+              <div class="punto-estacion menta">
+                <strong>Estación P3-B · Terraza de Estudio</strong>
+                <p>Acceso por escalera B, ala sur.</p>
+                <span class="tag-tachos">🥤 Plástico (+20 pts) · 🥫 Aluminio (+25 pts)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SÓTANO -->
+          <div class="respuesta sotano">
+            <p class="etiqueta">Nivel -1 · Acopio Especializado</p>
+            <h3>Mapa del Sótano 1 (Centro Mayor)</h3>
+            <div class="plano-piso">
+              <div class="punto-estacion azul">
+                <strong>Estación S1-A · Punto Limpio RAEE</strong>
+                <p>Frente al estacionamiento de bicicletas.</p>
+                <span class="tag-tachos">🔋 Pilas/Baterías (+45 pts) · 🔌 Cables y Electrónicos (+50 pts)</span>
+              </div>
+              <div class="punto-estacion">
+                <strong>Estación S1-B · Compactadora Universitaria</strong>
+                <p>Zona de carga y descarga interna.</p>
+                <span class="tag-tachos">📦 Cartón corrugado (+30 pts) · 🍾 Vidrio (+25 pts)</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="boton" href="#registro-canje">Registrar reciclaje en esta estación</a>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- SISTEMA DE PUNTUACIÓN Y RECOMPENSAS -->
+  <section id="recompensas" class="seccion contenedor">
+    <p class="etiqueta">EcoPuntos UPCycle</p>
+    <h2>Tu progreso y catálogo de recompensas</h2>
+
+    <div class="panel-puntos">
+      <div class="dos-columnas">
+        <div>
+          <h3>Saldo acumulativo actual (Perfil Demo)</h3>
+          <p class="puntos-numero">360 EcoPuntos</p>
+          <p>Nivel actual: <strong>Embajador Verde II</strong> · Te faltan <strong>140 pts</strong> para el Kit Universitario Sostenible.</p>
+        </div>
+        <div>
+          <p><strong>Progreso hacia la meta máxima (500 EcoPts):</strong></p>
+          <div class="barra-progreso" role="progressbar" aria-valuenow="360" aria-valuemin="0" aria-valuemax="500">
+            <div class="barra-relleno"></div>
+          </div>
+          <p class="nota" style="color: #C7F9CC;">72% completado · ¡Ya puedes canjear cualquiera de las 3 primeras recompensas!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <div>
+          <span class="costo-puntos">100 EcoPts</span>
+          <h3>☕ Vale de Café o Infusión</h3>
+          <p>Canjeable en la cafetería del Piso 1 llevando tu propio termo reutilizable.</p>
+        </div>
+        <a class="boton" href="#registro-canje">Canjear ahora</a>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <span class="costo-puntos">200 EcoPts</span>
+          <h3>🖨️ Pack 25 Impresiones B/N</h3>
+          <p>Crédito directo en tu cuenta institucional para impresiones en el Piso 3.</p>
+        </div>
+        <a class="boton" href="#registro-canje">Canjear ahora</a>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <span class="costo-puntos">350 EcoPts</span>
+          <h3>📓 Libreta Ecológica UPCycle</h3>
+          <p>Cuaderno fabricado con papel 100% reciclado recolectado en el campus.</p>
+        </div>
+        <a class="boton" href="#registro-canje">Canjear ahora</a>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <span class="costo-puntos">500 EcoPts</span>
+          <h3>🎒 Tomatodo Térmico + Pin</h3>
+          <p>Botella de acero inoxidable oficial del programa Campus Sostenible.</p>
+        </div>
+        <a class="enlace" href="#registro-canje">Faltan 140 EcoPts</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIO -->
+  <section id="testimonios" class="seccion fondo">
+    <div class="contenedor">
+      <blockquote>“Antes botaba mis botellas en cualquier tacho entre clases. Ahora sé que en el Piso 2 tengo una estación a diez pasos y con mis puntos pago mis impresiones de la semana”.</blockquote>
+      <p>— Estudiante de Ingeniería · Usuario de demostración UPCycle</p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE REGISTRO DE PUNTOS O CANJE -->
+  <section id="registro-canje" class="seccion contenedor two-columns">
+    <div class="dos-columnas">
+      <div>
+        <p class="etiqueta">Simulación de Operación</p>
+        <h2>Registra tu reciclaje o solicita tu canje</h2>
+        <p>Completa el formulario seleccionando la estación del piso donde depositaste tus residuos para sumar puntos, o elige la recompensa que deseas reclamar con tu saldo actual.</p>
+        <p class="nota">Demostración académica sin almacenamiento en servidor. No ingreses contraseñas reales.</p>
+      </div>
+
+      <form action="confirmacion.html" method="get" class="formulario">
+        <label for="nombre">Nombre del estudiante</label>
+        <input id="nombre" type="text" required maxlength="60" placeholder="Ejemplo: Valeria Torres" autocomplete="off">
+
+        <label for="correo">Correo institucional</label>
+        <input id="correo" type="email" required placeholder="u20261045@universidad.edu.pe" autocomplete="off">
+
+        <label for="operacion">Tipo de operación</label>
+        <select id="operacion" required>
+          <option value="">Selecciona una acción</option>
+          <option>Sumar puntos · Estación P1-A (Hall Principal)</option>
+          <option>Sumar puntos · Estación P1-B (Cafetería)</option>
+          <option>Sumar puntos · Estación P2-A (Biblioteca)</option>
+          <option>Sumar puntos · Estación P3-A (Cómputo)</option>
+          <option>Sumar puntos · Estación S1-A (Punto RAEE Sótano)</option>
+          <option>Canjear · Vale de Café (100 EcoPts)</option>
+          <option>Canjear · Pack 25 Impresiones (200 EcoPts)</option>
+          <option>Canjear · Libreta Ecológica (350 EcoPts)</option>
+        </select>
+
+        <label for="detalle">Código de estación o detalle del material</label>
+        <textarea id="detalle" required minlength="6" maxlength="240" rows="3" placeholder="Ejemplo: 3 botellas PET limpias en estación P2-B"></textarea>
+
+        <div>
+          <input id="acepto" type="checkbox" required>
+          <label for="acepto">Confirmo que los materiales están limpios y secos.</label>
+        </div>
+
+        <button type="submit" class="boton">Confirmar operación</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p><strong>UPCycle</strong> · Mapeo de Reciclaje Universitario y EcoPuntos</p>
+    <p>Contacto académico: sostenibilidad@upcycle-campus.edu</p>
+    <nav class="redes" aria-label="Redes sociales de referencia">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" alt="" width="24" height="24">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg" alt="" width="24" height="24">Instagram</a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg" alt="" width="24" height="24">YouTube</a>
+    </nav>
+    <p>© 2026 UPCycle · Proyecto educativo HTML y CSS · <a href="FUENTES.txt">Créditos de recursos</a></p>
+  </div>
+</footer>
+</body>
+</html>

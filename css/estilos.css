@@ -1,0 +1,556 @@
+/* ==========================================================================
+   UPCycle - Estilos Globales (Paleta Eco-Universitaria)
+   ========================================================================== */
+:root {
+  --azul-profundo: #22577A;
+  --turquesa: #38A3A5;
+  --esmeralda: #57CC99;
+  --menta-vibrante: #80ED99;
+  --menta-suave: #C7F9CC;
+  --blanco: #FFFFFF;
+  --texto-oscuro: #16384F;
+  --gris-borde: #B5E4C3;
+  --sombra: 0 8px 24px rgba(34, 87, 122, 0.12);
+  --radio: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--texto-oscuro);
+  background-color: var(--blanco);
+  line-height: 1.6;
+}
+
+img, iframe {
+  max-width: 100%;
+  display: block;
+}
+
+/* Accesibilidad */
+.saltar {
+  position: absolute;
+  left: -9999px;
+  background: var(--azul-profundo);
+  color: var(--blanco);
+  padding: 0.75rem 1.25rem;
+  z-index: 1000;
+}
+.saltar:focus {
+  left: 1rem;
+  top: 1rem;
+  border-radius: 8px;
+}
+
+/* Contenedores y Secciones */
+.contenedor {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.seccion {
+  padding: 4.5rem 0;
+}
+
+.fondo {
+  background-color: rgba(199, 249, 204, 0.35);
+  border-top: 1px solid var(--gris-borde);
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.dos-columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Tipografía */
+.etiqueta {
+  display: inline-block;
+  background-color: var(--menta-suave);
+  color: var(--azul-profundo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--esmeralda);
+}
+
+h1, h2, h3 {
+  color: var(--azul-profundo);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin-bottom: 1rem; }
+
+.nota {
+  font-size: 0.875rem;
+  color: var(--turquesa);
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
+/* ==========================================================================
+   Cabecera Sticky y Menú Desplegable sin JS
+   ========================================================================== */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--azul-profundo);
+  color: var(--blanco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.marca img {
+  border-radius: 50%;
+  border: 2px solid var(--menta-vibrante);
+  object-fit: cover;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.menu a, .desplegable summary {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  list-style: none;
+}
+
+.menu a:hover, .desplegable summary:hover {
+  background-color: var(--turquesa);
+  color: var(--menta-suave);
+}
+
+.desplegable {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: var(--azul-profundo);
+  border: 2px solid var(--esmeralda);
+  border-radius: var(--radio);
+  list-style: none;
+  min-width: 220px;
+  padding: 0.5rem;
+  box-shadow: var(--sombra);
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+}
+
+/* Badge de Puntos en Barra */
+.badge-puntos {
+  background-color: var(--menta-vibrante);
+  color: var(--azul-profundo);
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Botones y Enlaces
+   ========================================================================== */
+.boton {
+  display: inline-block;
+  background-color: var(--esmeralda);
+  color: var(--azul-profundo);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--esmeralda);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.boton:hover {
+  background-color: var(--azul-profundo);
+  color: var(--menta-vibrante);
+  border-color: var(--azul-profundo);
+}
+
+.enlace {
+  color: var(--turquesa);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.enlace:hover {
+  color: var(--azul-profundo);
+}
+
+/* ==========================================================================
+   Hero y Fotos
+   ========================================================================== */
+.hero {
+  padding: 4rem 0;
+}
+
+.foto {
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  border: 3px solid var(--menta-suave);
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+
+.postal figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--turquesa);
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Tarjetas (Pasos y Recompensas)
+   ========================================================================== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border: 2px solid var(--menta-suave);
+  border-top: 6px solid var(--turquesa);
+  border-radius: var(--radio);
+  padding: 1.75rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: var(--esmeralda);
+}
+
+.numero {
+  display: inline-block;
+  color: var(--turquesa);
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.costo-puntos {
+  display: inline-block;
+  background-color: var(--azul-profundo);
+  color: var(--menta-vibrante);
+  font-weight: 800;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+/* ==========================================================================
+   Mapeo Interactivo por Pisos (CSS Radio Tabs + Plano Arquitectónico)
+   ========================================================================== */
+.orientador {
+  border: 2px solid var(--turquesa);
+  border-radius: var(--radio);
+  padding: 1.75rem;
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+  margin-top: 1.5rem;
+}
+
+.orientador legend {
+  font-weight: 800;
+  color: var(--azul-profundo);
+  padding: 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.orientador input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.orientador label {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  margin: 0.35rem 0.5rem 1.25rem 0;
+  background-color: var(--menta-suave);
+  color: var(--azul-profundo);
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.orientador label:hover {
+  background-color: var(--menta-vibrante);
+}
+
+.orientador input[type="radio"]:checked + label {
+  background-color: var(--azul-profundo);
+  color: var(--menta-vibrante);
+  border-color: var(--esmeralda);
+}
+
+.respuesta {
+  display: none;
+  border-top: 2px dashed var(--gris-borde);
+  padding-top: 1.5rem;
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#piso1:checked ~ .resultados .piso1,
+#piso2:checked ~ .resultados .piso2,
+#piso3:checked ~ .resultados .piso3,
+#sotano:checked ~ .resultados .sotano {
+  display: block;
+}
+
+/* Plano esquemático del piso */
+.plano-piso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  background-color: #F4FBF7;
+  border: 2px solid var(--esmeralda);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.punto-estacion {
+  background-color: var(--blanco);
+  border-left: 6px solid var(--esmeralda);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(34, 87, 122, 0.08);
+}
+
+.punto-estacion.azul { border-left-color: var(--azul-profundo); }
+.punto-estacion.turquesa { border-left-color: var(--turquesa); }
+.punto-estacion.menta { border-left-color: var(--menta-vibrante); }
+
+.tag-tachos {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: var(--menta-suave);
+  color: var(--azul-profundo);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================================
+   Panel de Puntuación y Barra de Progreso
+   ========================================================================== */
+.panel-puntos {
+  background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--turquesa) 100%);
+  color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  margin-bottom: 2rem;
+}
+
+.panel-puntos h3 {
+  color: var(--menta-suave);
+  margin-bottom: 0.5rem;
+}
+
+.puntos-numero {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--menta-vibrante);
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 1rem 0 0.5rem;
+}
+
+.barra-relleno {
+  width: 72%;
+  height: 100%;
+  background-color: var(--menta-vibrante);
+  border-radius: 999px;
+}
+
+/* ==========================================================================
+   Formulario
+   ========================================================================== */
+.formulario {
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: var(--radio);
+  border: 2px solid var(--turquesa);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.formulario label {
+  font-weight: 700;
+  color: var(--azul-profundo);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--gris-borde);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto-oscuro);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--turquesa);
+  background-color: rgba(199, 249, 204, 0.18);
+}
+
+/* ==========================================================================
+   Testimonios, Confirmación y Video
+   ========================================================================== */
+blockquote {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--azul-profundo);
+  border-left: 6px solid var(--esmeralda);
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.confirmacion {
+  background-color: rgba(199, 249, 204, 0.35);
+  border: 2px solid var(--esmeralda);
+  border-radius: var(--radio);
+  padding: 2.5rem;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 3px solid var(--turquesa);
+  border-radius: var(--radio);
+}
+
+/* ==========================================================================
+   Pie de Página
+   ========================================================================== */
+.pie {
+  background-color: var(--azul-profundo);
+  color: var(--menta-suave);
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+.pie strong {
+  color: var(--menta-vibrante);
+}
+
+.pie a {
+  color: var(--menta-vibrante);
+  text-decoration: none;
+}
+
+.pie a:hover {
+  text-decoration: underline;
+}
+
+.redes {
+  display: flex;
+  gap: 1.25rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: rgba(56, 163, 165, 0.3);
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+}
+
+.redes img {
+  filter: brightness(0) invert(1);
+}
